@@ -1,0 +1,16 @@
+<style>
+    .tag-list {
+        border: 3px solid gray;
+        padding: 7px;
+        margin: 7px;
+        text-align: center
+    }
+</style>
+
+<div class="tag-list">
+    <h4>Post Tags:</h4>
+    {% for tag in site.tags %}
+    <a href="/tags/#{{ tag[0] | slugify }}"> {{ tag[0] }} ({{ tag[1].size }}) </a>{% unless forloop.last %} |
+    {% endunless %}
+    {% endfor %}
+</div>
