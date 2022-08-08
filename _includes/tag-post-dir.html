@@ -1,0 +1,28 @@
+{% for tag in site.tags %}
+<h3 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h3>
+<ul>
+    {% for post in site.posts %}
+    {% if post.tags contains tag[0] %}
+    <li>
+        <h4>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h4>
+        <footer class="entry-meta">
+            <ul>
+                {% if post.date %}
+                <li><span class="icon">{% include icon-calendar.svg %}</span><time class="entry-time"
+                        datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+                </li>
+                {% endif %}
+                {% if post.read_time %}
+                <li><span class="icon">{% include icon-stopwatch.svg %}</span>{% capture read_time %}{% include
+                    read-time.html
+                    %}{% endcapture %}{{ read_time | strip }}</li>
+                {% endif %}
+            </ul>
+        </footer>
+    </li>
+    {% endif %}
+    {% endfor %}
+</ul>
+{% endfor %}
