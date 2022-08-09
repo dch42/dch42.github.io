@@ -4,7 +4,7 @@ title: Generating Linked Tag List With Counts In Jekyll With Liquid
 subtitle:
 author: CD
 categories: jekyll
-tags: liquid jekyll html css
+tags: liquid jekyll
 sidebar: []
 ---
 
@@ -65,7 +65,7 @@ Executing this loop within our div will construct the list for us. We can make t
 {% include tag-list.html %}
 ```{% endraw %}
 
-*I've added constructed links to the tagged posts in my version below, and will cover how that works in [this post](link).*
+*I've added constructed links to the tagged posts in my version below, and will cover how that works in [this post](tag-page-jekyll).*
 
 `/_includes/tag-list.html`:
 {% raw %}```html
