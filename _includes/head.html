@@ -21,6 +21,8 @@
     }
   </script>
 
+
+
   <link rel="stylesheet" href="{{ '/assets/stylesheets/main.css' | relative_url }}">
   {% if site.data.theme.google_fonts %}
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={% for font in site.data.theme.google_fonts %}{{ font.name | replace: ' ', '+' }}{% if font.weights %}:{% endif %}{{ font.weights | remove: ' ' }}{% if forloop.last != true %}|{% endif %}{% endfor %}">
@@ -53,4 +55,13 @@
     {% endcomment %}
     {% include head-feed.html %}
   {% endif %}
+
+  <noscript>
+    <div style="width: 75%; display: flex; justify-content: center; padding: 25px; margin: 12px; border: 1px solid white;">
+      <p>It looks like Javascript is disabled in your browser (I do the same on unfamiliar sites). 
+        The hamburger navigation will not work without Javascript enabled. 
+        You can audit the script for this page <a href="https://github.com/dch42/jekyll-theme-basically-basic/tree/master/assets/javascripts">here</a>.</p>
+    </div>
+  </noscript>
+
 </head>
