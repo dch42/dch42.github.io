@@ -16,9 +16,9 @@ This is particularly useful for generating high-level project use case charts, b
 
 ## Last.fm API
 
-I wrote about the [Last.fm API](https://www.last.fm/api/intro) in [this previous post]({% post_url 2022-07-10-auto-post-with-python-last-fm-api %}), and this will use the same endpoint and many of the same functions to write the markdown file.
+I wrote about the [Last.fm API](https://www.last.fm/api/intro) in [this previous post]({% post_url 2022-07-10-auto-post-with-python-last-fm-api %}). 
 
-We'll make a pie chart displaying the top 7 most listened artists for the week, so our request URL will use the [`getWeeklyArtistChart`](https://www.last.fm/api/show/user.getWeeklyArtistChart) user method with a limit of `7`. 
+To make a pie chart displaying the user's top 7 most listened artists for the week, the request URL will use the [`getWeeklyArtistChart`](https://www.last.fm/api/show/user.getWeeklyArtistChart) user method with a limit of `7`. 
 
 ~~~
 https://ws.audioscrobbler.com/2.0/?method=user.getWeeklyArtistChart&user={username}&api_key={key}&format=json&limit=7
@@ -38,7 +38,7 @@ pie title Best Radio Audio Dramas
     "Ruby: Galactic Gumshoe" : 42
 ~~~
 ````
-*^ You may need to replace the tildes with backticks. ^*
+*^ May need to replace the tildes with backticks. ^*
 
 The above block will produce a ***`pie`*** chart with a ***`title`*** of 'Best Radio Audio Dramas', where each of the subsequent k:v pairs are charted according to proportion of their values:
 
@@ -53,7 +53,7 @@ pie title Best Radio Audio Dramas
 ```
 </div><br>
 
-The `write_md` function from the [previous post]({% post_url 2022-07-10-auto-post-with-python-last-fm-api %}) can be used to construct our final markdown file. 
+The `write_md()` function from the [previous post]({% post_url 2022-07-10-auto-post-with-python-last-fm-api %}) can be used again to construct the final markdown file. 
 
 ~~~python
 def write_md(text):
@@ -63,7 +63,7 @@ def write_md(text):
         md.write(text+"\n")
 ~~~
 
-The start and end of the mermaid code block are static and can be assigned to strings to be pushed to our file. 
+The start and end of the mermaid code block are static and can be assigned to strings to be pushed to the outfile. 
 
 *using ``{'`'*3}`` to avoid executing mermaid code in post, can be written normally in python script*
 
