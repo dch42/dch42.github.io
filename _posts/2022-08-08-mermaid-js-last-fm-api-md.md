@@ -16,7 +16,7 @@ This is particularly useful for generating high-level project use case charts, b
 
 ## Last.fm API
 
-I wrote about accessing the [Last.fm API](https://www.last.fm/api/intro) in [this previous post]({% post_url 2022-07-10-auto-post-with-python-last-fm-api %}), and this will use the same endpoint and many of the same functions to write the markdown file.
+I wrote about the [Last.fm API](https://www.last.fm/api/intro) in [this previous post]({% post_url 2022-07-10-auto-post-with-python-last-fm-api %}), and this will use the same endpoint and many of the same functions to write the markdown file.
 
 We'll make a pie chart displaying the top 7 most listened artists for the week, so our request URL will use the [`getWeeklyArtistChart`](https://www.last.fm/api/show/user.getWeeklyArtistChart) user method with a limit of `7`. 
 
@@ -40,7 +40,7 @@ pie title Best Radio Audio Dramas
 ````
 *^ You may need to replace the tildes with backticks. ^*
 
-The above block will produce a ***`pie`*** chart with a ***`title`*** of 'Best Radio Audio Dramas', where each of the subsequent k:v pairs are charted according to total distribution of their values:
+The above block will produce a ***`pie`*** chart with a ***`title`*** of 'Best Radio Audio Dramas', where each of the subsequent k:v pairs are charted according to proportion of their values:
 
 <div style="background: white;">
 ```mermaid! 
