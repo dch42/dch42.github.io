@@ -4,7 +4,7 @@ title: Automated Jekyll Posts With Python and Last.fm API
 subtitle: Programatically creating markdown files from fetched Last.fm data
 author: CD
 categories: python
-tags: music python api
+tags: python api
 sidebar: []
 ---
 
