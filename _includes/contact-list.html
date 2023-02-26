@@ -16,6 +16,14 @@
     <li>{% include icon-twitter.html username=site.twitter_username label='Twitter' %}</li>
   {% endif %}
 
+  {% if site.lastfm_username %}
+  <li>{% include icon-lastfm.html username=site.lastfm_username label='Last.fm' %}</li>
+  {% endif %}
+
+  {% if site.mastodon_username %}
+  <li>{% include icon-mastodon.html username=site.mastodon_username label='Mastodon' %}</li>
+  {% endif %}
+
   <li>
     {% if site.plugins contains 'jekyll-feed' or site.gems contains 'jekyll-feed' %}
       <a href="{{ site.feed.path | default: 'feed.xml' | relative_url }}" title="Atom Feed">
