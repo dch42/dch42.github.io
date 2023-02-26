@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Icons
+   Icons 
    ========================================================================== */
 
 .icon {
@@ -25,6 +25,7 @@
     (instagram, #e4405f),
     (lastfm, #d51007),
     (linkedin, #0077b5),
+    (mastodon, #595aff),
     (pinterest, #bd081c),
     (rss, #ffa500),
     (soundcloud, #f30),
@@ -33,6 +34,7 @@
     (twitter, #1da1f2),
     (xing, #005a5f),
     (youtube, #cd201f)
+
   );
 
   @each $icon, $color in $icons {
